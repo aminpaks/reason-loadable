@@ -27,8 +27,8 @@ module WithRender = (Config: Configuration) => {
   let make =
       (
         ~fetch,
-        ~onFail=_error => ReasonReact.nullElement,
-        ~onLoading=() => ReasonReact.nullElement,
+        ~onFail=_error => ReasonReact.null,
+        ~onLoading=() => ReasonReact.null,
         ~delay=200,
         ~render: renderProp,
         _children: childless
@@ -90,8 +90,8 @@ module WithChildren = (Config: Configuration) => {
   let make =
       (
         ~fetch,
-        ~onFail=_error => ReasonReact.nullElement,
-        ~onLoading=() => ReasonReact.nullElement,
+        ~onFail=_error => ReasonReact.null,
+        ~onLoading=() => ReasonReact.null,
         ~delay=200,
         children: renderChild
       ) => {
